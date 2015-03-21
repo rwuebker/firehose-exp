@@ -1,0 +1,12 @@
+<div ng-controller="MeatController" id="meat">
+  <div id="meatContainer">
+    <h1>Meat me ASAP</h1>
+    <h3> - where you will see juicy steak (hopefully):</h3>
+    <div ng-repeat='tweet in tweets' id="tweets">
+      <div>{{tweet.text}}</div>
+      <div>{{tweet.user}}</div>
+      <div id="created">{{tweet.created_at}}</div>
+      <img ng-src="{{tweet.media}}">
+    </div>
+  </div>
+</div>

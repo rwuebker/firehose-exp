@@ -1,0 +1,10 @@
+doctype html
+html(ng-app='shApp')
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    block header_scripts
+      script(src='/assets/appDist.js')
+ 
+  body
+    block content
