@@ -24,7 +24,7 @@ var Twitter = require('twitter');
 router.get('/tweets', function(req, res, next) {
   //initialize search string
   console.log("inside the /tweets api endpoint");
-  var searchString = "steak -shake -tube -Tube -@Steak_goddess -filter:retweets filter:images "
+  var searchString = "steak -shake -tube -Tube -baking -MoronicQuill -knife -knives -anakcyber2an -@Steak_goddess -filter:retweets filter:images "
   var tweetArray = [];
   var count = Date.now()%2;
   count = count + 20;
