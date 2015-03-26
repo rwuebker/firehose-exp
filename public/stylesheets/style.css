@@ -99,8 +99,9 @@ nav#nav {
 
 #description{
   font-family:Verdana, Verdana, Geneva, sans-serif;
-  padding-top:225px;
+  padding-top:175px;
   padding-left:50px;
+  display:inline-block;
 }
 
 h3{
