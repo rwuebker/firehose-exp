@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var config = require('../config/local.env');
+//var config = require('../config/env.vars.js');
 var Twitter = require('twitter');
 
 
@@ -13,17 +13,24 @@ var Twitter = require('twitter');
 
 
   //set up twitter connection
+  // var client = new Twitter({
+  //   consumer_key: config.CONSUMER_KEY,
+  //   consumer_secret: config.CONSUMER_SECRET,
+  //   access_token_key: config.ACCESS_TOKEN,
+  //   access_token_secret: config.ACCESS_TOKEN_SECRET
+  // });
+
   var client = new Twitter({
-    consumer_key: config.twitterAuth.CONSUMER_KEY,
-    consumer_secret: config.twitterAuth.CONSUMER_SECRET,
-    access_token_key: config.twitterAuth.ACCESS_TOKEN,
-    access_token_secret: config.twitterAuth.ACCESS_TOKEN_SECRET
+    consumer_key: process.env.CONSUMER_KEY,
+    consumer_secret: process.env.CONSUMER_SECRET,
+    access_token_key: process.env.ACCESS_TOKEN,
+    access_token_secret: process.env.ACCESS_TOKEN_SECRET
   });
+
 
 /* GET users listing. */
 router.get('/tweets', function(req, res, next) {
   //initialize search string
-  console.log("inside the /tweets api endpoint");
   var searchString = "steak -shake -tube -Tube -baking -MoronicQuill -knife -knives -anakcyber2an -@Steak_goddess -filter:retweets filter:images "
   var tweetArray = [];
   var count = Date.now()%2;

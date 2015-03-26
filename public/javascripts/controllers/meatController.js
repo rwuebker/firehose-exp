@@ -6,7 +6,6 @@ angular.module('shApp.meatCtrl', [])
 
   TweetsSvc.getTweets()
   .then(function(data){
-    console.log("this is data in the controller: ", data);
     $scope.tweets = data.data;
     for(var i = 0; i < $scope.tweets.length; i++){
       var strTimeArray = $scope.tweets[i].created_at.split(" ");
