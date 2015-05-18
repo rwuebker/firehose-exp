@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 if(!process.env.DEPLOY){
-  //var config = require('../config/env.vars.js');
+  var config = require('../config/env.vars.js');
 };
 var Twitter = require('twitter');
 
