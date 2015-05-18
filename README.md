@@ -8,7 +8,8 @@ The streaming portions of the page have no limit as to how many times users can 
 
 ## Usage
 
-The landing page has a button that when clicked displays steak photo tweets posted recently from the Twitter Rest API.
+The two links in the navigation bar access the two Twitter APIs. The first link, Steak!, displays steak photo tweets posted recently from the Twitter Rest API.
+
 The Twit Roulette page has a text box where a user can enter a keyword and the amount of seconds they would like to collect tweets from the streaming Twitter Firehose sample.  When the displayed button is clicked the Firehouse will be sampled for the specified amount of seconds and the results that contain images with the keyword provided will be displayed on the page.
 
 ## Cloning Repository Details
