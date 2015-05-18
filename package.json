@@ -30,7 +30,7 @@
     "twitter": "^1.2.5"
   },
   "devDependencies": {
-    "karma": "^0.12.31"
+    "karma": "^0.12.31",
     "karma-chai": "^0.1.0",
     "karma-mocha": "^0.1.10",
     "karma-phantomjs-launcher": "^0.1.4",
