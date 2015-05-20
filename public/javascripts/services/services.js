@@ -3,7 +3,6 @@ angular.module('shApp.services', [])
   
   //Service to get all tweets for a search
   this.getTweets = function(){
-    console.log("inside getTweets in TweetsSvc")
      return $http.get('/api/tweets');
 
   };

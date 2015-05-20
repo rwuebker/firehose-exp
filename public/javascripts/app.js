@@ -22,6 +22,5 @@ angular.module('shApp', ['ui.router', 'shApp.landingCtrl', 'shApp.directives', '
     })
 
 
-
 });
 

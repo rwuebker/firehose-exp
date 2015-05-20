@@ -3,9 +3,9 @@
     <h1>Twit Roulette</h1>
     <p>When you hit the 'Catch Data' button we will grab streaming tweets from the Twitter Firehose sample and filter for images and word that is specified in the word box below.</p>
     <div>Enter search word, example: 'dogs':</div>
-    <input ng-model='searchWord' class='form-control' />
+    <input ng-model='searchWord' class='form-control' id="searchWord" placeholder="enter search word.."/>
     <div>Enter seconds of time to catch data, example: '5':</div>
-    <input ng-model='seconds' class='form-control' />
+    <input ng-model='seconds' class='form-control' id="seconds" placeholder="enter amt of seconds.."/>
     <button ng-click='getFirehose(searchWord, seconds)' class='btn btn-default'>Click To Catch Data</button></br></br>
     <div ng-repeat='tweet in tweets'>
       <div>{{tweet.text}}</div>

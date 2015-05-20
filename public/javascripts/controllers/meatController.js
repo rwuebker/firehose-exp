@@ -1,11 +1,11 @@
 angular.module('shApp.meatCtrl', [])
-.controller('MeatController', function($scope, TweetsSvc){
+.controller('MeatController', function($scope, TweetsSvc, $log){
   $scope.name = "meat";
   $scope.tweets = [];
   $scope.searchWord = "";
-
   TweetsSvc.getTweets()
   .then(function(data){
+    console.log("hello");
     $scope.tweets = data.data;
     for(var i = 0; i < $scope.tweets.length; i++){
       var strTimeArray = $scope.tweets[i].created_at.split(" ");
