@@ -37,4 +37,17 @@ angular.module('shApp.directives', [])
       replace: true,
       templateUrl: '/views/welcome.html'
     }
-  });
+  }).directive('noTweets', function(){
+    return function(scope, element, attrs){
+      scope.$watch('tweetsExist', function() {
+        if(!scope.tweetsExist){
+          var el = angular.element('<p id="noTweets">').text("No tweets returned for your search.");
+          element.append(el);
+        }else{
+          var el = angular.element(document.querySelector('#noTweets'));
+          el.remove();
+        }
+      });
+
+    }
+  })

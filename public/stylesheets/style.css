@@ -118,5 +118,8 @@ h1.desc, h2.desc{
 
 #searchWord, #seconds{
   border-radius:5px;
-;
+}
+
+#spin {
+  color: white;
 }

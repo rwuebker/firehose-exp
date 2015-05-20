@@ -1,13 +1,23 @@
 angular.module('shApp.rouletteCtrl', [])
-.controller('RouletteController', function($scope, FirehoseSvc){
+.controller('RouletteController', function($scope, FirehoseSvc, usSpinnerService){
   $scope.name = "roulette";
   $scope.tweets = [];
   $scope.tweetsExist = true;
+  $scope.startSpin = function(){
+      usSpinnerService.spin('spinner-1');
+  }
+  $scope.stopSpin = function(){
+      usSpinnerService.stop('spinner-1');
+  }
   $scope.getFirehose = function(searchWord, seconds){
-
+    $scope.startSpin();
     FirehoseSvc.getTweets(searchWord, seconds)
     .then(function(data){
+      $scope.stopSpin();
       $scope.tweets = data.data;
+      if($scope.tweets.length > 0){
+        $scope.tweetsExist = true;
+      }
       for(var i = 0; i < $scope.tweets.length; i++){
         $scope.tweets[i].user = "Written by: " + $scope.tweets[i].user;
         //this is to format link text to get rid of urls and &'s
@@ -54,7 +64,7 @@ angular.module('shApp.rouletteCtrl', [])
         $scope.tweets[i].created_at = newtime.join(" ");
       }
       if(!$scope.tweets.length){
-        $scope.tweets = [{text:"Empty! No tweets came in with that criteria over that time period"}];
+        $scope.tweetsExist = false;
       }
     })
 

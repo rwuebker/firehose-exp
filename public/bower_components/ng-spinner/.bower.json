@@ -1,0 +1,14 @@
+{
+  "name": "ng-spinner",
+  "homepage": "https://github.com/ng-star/ng-spinner",
+  "_release": "4bfbf74c0b",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "4bfbf74c0b7fc5ab5ac709055fea900ea0a122ff"
+  },
+  "_source": "git://github.com/ng-star/ng-spinner.git",
+  "_target": "*",
+  "_originalSource": "ng-spinner",
+  "_direct": true
+}

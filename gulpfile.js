@@ -9,6 +9,8 @@ var jshint = require('gulp-jshint');
 
 gulp.task('js', function(){
   gulp.src(['public/bower_components/angular/angular.min.js',
+           'public/bower_components/ng-spinner/spin.js',
+           'public/bower_components/ng-spinner/ng-spinner.min.js',
            'public/bower_components/angular-ui-router/release/angular-ui-router.min.js',
            'public/javascripts/app.js',
            'public/javascripts/**/*.js'])

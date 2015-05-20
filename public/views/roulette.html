@@ -7,10 +7,13 @@
     <div>Enter seconds of time to catch data, example: '5':</div>
     <input ng-model='seconds' class='form-control' id="seconds" placeholder="enter amt of seconds.."/>
     <button ng-click='getFirehose(searchWord, seconds)' class='btn btn-default'>Click To Catch Data</button></br></br>
+    <span id="spin" us-spinner="{radius:30, width:8, length: 16, color:white}" spinner-key="spinner-1"></span>
+    <div no-tweets></div>
     <div ng-repeat='tweet in tweets'>
       <div>{{tweet.text}}</div>
       <div>{{tweet.user}}</div>
       <div>{{tweet.created_at}}</div>
       <img ng-src="{{tweet.media}}">
     </div>
+    
 </div>

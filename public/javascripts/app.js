@@ -1,6 +1,9 @@
-angular.module('shApp', ['ui.router', 'shApp.landingCtrl', 'shApp.directives', 'shApp.meatCtrl', 'shApp.services','shApp.rouletteCtrl'])
+angular.module('shApp', ['angularSpinner', 'ui.router', 'shApp.landingCtrl', 'shApp.directives', 'shApp.meatCtrl', 'shApp.services','shApp.rouletteCtrl'])
 
-.config(function($stateProvider, $httpProvider){
+.config(function(usSpinnerConfigProvider, $stateProvider, $httpProvider){
+  
+  usSpinnerConfigProvider.setDefaults({color: 'white'});
+    
   $stateProvider
     .state('landing', {
       template: '<shapp-landing></shapp-landing>',
@@ -23,4 +26,5 @@ angular.module('shApp', ['ui.router', 'shApp.landingCtrl', 'shApp.directives', '
 
 
 });
+
 
