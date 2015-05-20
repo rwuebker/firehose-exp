@@ -7,7 +7,6 @@ angular.module('shApp.rouletteCtrl', [])
 
     FirehoseSvc.getTweets(searchWord, seconds)
     .then(function(data){
-      alert("hello");
       $scope.tweets = data.data;
       for(var i = 0; i < $scope.tweets.length; i++){
         $scope.tweets[i].user = "Written by: " + $scope.tweets[i].user;
@@ -27,10 +26,7 @@ angular.module('shApp.rouletteCtrl', [])
         $scope.tweets[i].text = newArray.join(" ");
 
         var strTimeArray = $scope.tweets[i].created_at.split(" ");
-        console.log("this is strTimeArray: ", strTimeArray);
         var test = $scope.tweets[i].created_at;
-        console.log("this is test: ", test);
-        console.log("this is created at: ", test.toLocaleTimeString());
         var newtime = [];
         for(var z = 0; z < strTimeArray.length; z++){
           if(strTimeArray[z].indexOf("+") === -1){
